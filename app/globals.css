@@ -1,0 +1,35 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+  color-scheme: dark;
+}
+
+body {
+  background: #0a0a0d;
+  background-image:
+    radial-gradient(1200px 600px at 15% -10%, rgba(255, 93, 58, 0.10), transparent 60%),
+    radial-gradient(900px 500px at 100% 0%, rgba(91, 140, 255, 0.10), transparent 55%);
+}
+
+::selection {
+  background: #ff5d3a;
+  color: #0a0a0d;
+}
+
+@keyframes shimmer {
+  0% { transform: translateX(-120%) rotate(8deg); }
+  100% { transform: translateX(220%) rotate(8deg); }
+}
+.foil-shimmer {
+  animation: shimmer 3.2s ease-in-out infinite;
+}
+
+@keyframes rise {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+.animate-rise {
+  animation: rise 0.35s ease-out both;
+}
