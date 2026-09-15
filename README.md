@@ -1,4 +1,4 @@
-# Ripline — pack ripping storefront (Coinflow headless checkout)
+# Ripline — pack ripping storefront
 
 A Next.js 14 app: a pack storefront (`/`) where clicking a pack opens a
 "Buy a pack" modal. First purchase runs a **Zero Authorization** ($0, stores
@@ -406,13 +406,3 @@ npm run dev
 
 Open http://localhost:3000. Use Coinflow's sandbox test cards for the first
 purchase — subsequent purchases in the same browser will skip the card form.
-
-## Deploy to Vercel
-
-```bash
-vercel
-```
-
-Then set `COINFLOW_ENV`, `COINFLOW_MERCHANT_ID`, and `COINFLOW_API_KEY` as
-Environment Variables in the Vercel project settings (Production and
-Preview), matching `.env.example`.
