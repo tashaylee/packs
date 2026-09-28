@@ -380,11 +380,7 @@ export async function getVenmoMerchantId(userId: string): Promise<{ paypalMercha
   assertConfigured();
   const sessionKey = await getSessionKey(userId);
 
-  const res = await fetch(`${BASE_URL}/api/merchant/v2`, {
-    headers: {
-      ...sessionKeyHeaders(sessionKey),
-      Authorization: API_KEY as string,
-    },
+  const res = await fetch(`${BASE_URL}/merchant/view/v2/${process.env.COINFLOW_MERCHANT_ID}`, {
     cache: "no-store",
   });
 

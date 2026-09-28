@@ -38,6 +38,7 @@ export function ApplePaySdkButton({
           onSuccess(paymentId);
         }}
         onError={onError}
+        origins={["https://packs-demo.vercel.app"]}
       />
     </div>
   );
