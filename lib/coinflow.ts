@@ -518,6 +518,7 @@ export async function newPayPalCheckout(params: {
       vault: true,
       returnUrl: params.returnUrl,
       cancelUrl: params.cancelUrl,
+      email: params.email
     }),
     cache: "no-store",
   });
